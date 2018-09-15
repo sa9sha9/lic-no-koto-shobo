@@ -1,0 +1,37 @@
+<html>
+<head>
+	<link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+	<style>
+		select {
+			height : 30px;
+		}
+	</style>
+</head>
+<body>
+<form id="borrow_form">
+	<label for="book_title">本のタイトル</label>
+	<input type="text" name="book_title" id="book_title" disabled/>
+
+	<label for="user_belonging">あなたの所属</label>
+	<input type="text" name="user_belonging" id="user_belonging" placeholder="学生の場合は学籍番号"/>
+
+	<label for="user_name">あなたのお名前</label>
+	<input type="text" name="user_name" id="user_name" placeholder="山田 太郎"/>
+
+	<label for="user_contact">あなたの連絡先</label>
+	<input type="text" name="user_contact" id="user_contact" placeholder="メールアドレス/電話番号"/>
+
+	<label for="user_comment">おひとこと</label>
+	<input type="text" name="user_comment" id="user_comment" placeholder="運命的な出会いを感じました。"/>
+
+	<!--<label for="parts_description_input">その他備考:</label>-->
+	<!--<input type="text" name="parts_description" id="parts_description_input" />-->
+
+	<button type="submit" class="mod-primary" id="btn_borrow">借りる</button>
+</form>
+<script src="https://p.trellocdn.com/power-up.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://api.trello.com/1/client.js?key=2ec49eaf34ee47e1a5b2b2b6e1602665&token=dadde8e927e858c3a70bf81f17895696ad6eabdd05a0b87324b5c322ae8b4443"></script>
+<script src="../assets/js/borrow_book.js"></script>
+</body>
+</html>
