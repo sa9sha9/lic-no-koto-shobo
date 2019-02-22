@@ -26,6 +26,21 @@ window.btn_borrow.addEventListener('click', function( event ) {
 	})
 	.then( (res) => {
 		console.log('successfully borrowed')
+
+		// move card to "prev book"
+		const underBorrowSticker = '5b9d0568815f7c1e57e5c166'
+		Trello.put(`/cards/${context.card}/stickers/${underBorrowSticker}`, {
+			top: 2.0,
+			left: 15.0,
+			zIndex: 1,
+			rotate: -4
+		})
+		.then(() => {
+			console.log('success to put sticker')
+		})
+
+		// put a sticker, BORROWED, onto borrowed book
+
 		t.closePopup()
 	})
 	.catch( (errorMsg) => {
